@@ -15,7 +15,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        $companies = Company::all();
+
+        return view('company.index')->with('companies', $companies);
     }
 
     /**
@@ -25,7 +27,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('companies.create');
+        return view('company.create');
     }
 
     /**
